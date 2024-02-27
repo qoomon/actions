@@ -1,7 +1,7 @@
 # github-actions
 
-- [Setup GIT User](https://github.com/qoomon/setup-git-user)
-- [Signed Commits](https://github.com/qoomon/commit)
+- [Setup GIT User](https://github.com/qoomon/actions--setup-git-user)
+- [Signed Commits](https://github.com/qoomon/actions--commit)
   - Create signed commit as GitHub Actions Bot.
-- [GitHub Actions Access Tokens](https://github.com/qoomon/access-token)
+- [GitHub Actions Access Tokens](https://github.com/qoomon/actions--access-token)
   - Create temporary access token with configurable permissions. The better alternative to PAT tokens.

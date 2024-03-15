@@ -1,6 +1,6 @@
 # github-actions
 
-- [Setup GIT User](https://github.com/qoomon/actions--setup-git-user)
+- [Setup GIT Config](https://github.com/qoomon/actions--setup-git)
 - [Create Commits](https://github.com/qoomon/actions--create-commit)
   - Create commits via GitHub api.
   - This action can be used to create signed commits via GitHub app tokens (`ghs_***`).

@@ -14,7 +14,7 @@
 ---
 
 - [GitHub Actions Access Tokens](https://github.com/qoomon/actions--access-token)
-  - Create temporary access token with configurable permissions. The better alternative to PAT tokens.
+  - Get rid of PAT tokens, create temporary access token with configurable permissions instead.
  
 - [OIDC Debug](https://github.com/qoomon/actions--oidc-debug)
 

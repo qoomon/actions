@@ -11,8 +11,8 @@
 
 - [Create Commits](https://github.com/qoomon/actions--create-commit)
   - Create commits via GitHub api.
-  - This action can be used to create signed commits via GitHub app tokens (`ghs_***`).
-- [Create Tags](https://github.com/qoomon/actions--create-commit)
+  - Create signed commits by using GitHub app tokens (`ghs_***`).
+- [Create Tags](https://github.com/qoomon/actions--create-tag)
   - Create tags via GitHub api.
 - [Setup GIT Config](https://github.com/qoomon/actions--setup-git)
   

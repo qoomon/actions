@@ -17,7 +17,9 @@
 - [Setup GIT Config](https://github.com/qoomon/actions--setup-git)
   
 ---
- 
+
+- [Event Inputs](https://github.com/qoomon/actions--event-inputs)
+  - Log event inputs
 - [OIDC Debug](https://github.com/qoomon/actions--oidc-debug)
 
 

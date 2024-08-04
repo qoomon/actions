@@ -3,9 +3,9 @@
 - [GitHub TypeScript Action Template](https://github.com/qoomon/actions--template)
 
 ---
-- [Enchanced GitHub Actions Context](https://github.com/qoomon/actions--context)
+- [Enchanced Job Context](https://github.com/qoomon/actions--context)
   - Access additional job context informations like job log url or job environment
-- [GitHub Actions Access Tokens](https://github.com/qoomon/actions--access-token)
+- [Temporary Access Tokens](https://github.com/qoomon/actions--access-token)
   - Get rid of PAT tokens, create temporary access token with configurable permissions instead.
 
 ---

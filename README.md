@@ -7,6 +7,8 @@
   - Access additional job context informations like job log url or job environment
 - [Temporary Access Tokens](https://github.com/qoomon/actions--access-token)
   - Get rid of PAT tokens, create temporary access token with configurable permissions instead.
+- [Set Env](https://github.com/qoomon/actions--set-env)
+  - Set export scoped environment variables based on `vars` and `secrets` context.
 
 ---
 

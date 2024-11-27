@@ -1,6 +1,6 @@
 # Source: https://github.com/qoomon/actions/blob/main/workflows/dependabot-auto-merge.yaml
 
-# Setup:
+# Setup
 # - Settings > Actions > General > Check "Allow GitHub Actions to create and approve pull requests"
 # - Settings > General > Check "Allow auto-merge Loading"
 
@@ -12,18 +12,18 @@ permissions:
   pull-requests: write
 
 jobs:
-  dependabot:
+  merge:
     runs-on: ubuntu-latest
     if: ${{ github.actor == 'dependabot[bot]' }}
     steps:
-      - name: Dependabot metadata
+      - uses: dependabot/fetch-metadata@v2
         id: metadata
-        uses: dependabot/fetch-metadata@v2
-        with:
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
-      - name: Auto-merge changes from Dependabot
-        if: steps.metadata.outputs.update-type != 'version-update:semver-major'
+      
+      # possible update-type values :version-update:semver-major, version-update:semver-minor, and version-update:semver-patch
+      - if: steps.metadata.outputs.update-type == 'version-update:semver-minor' || steps.metadata.outputs.update-type == 'version-update:semver-patch'
+        name: Auto-merge changes from Dependabot
         run: gh pr merge --auto --squash "$PR_URL"
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GH_TOKEN: ${{secrets.DEPENDABOT_TOKEN}}

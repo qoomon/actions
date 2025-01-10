@@ -1,6 +1,4 @@
-[![](https://img.shields.io/badge/Marketplace%20Actions-qoomon-blue)](https://github.com/marketplace?type=actions&query=qoomon)
-
-# github-actions
+# github-actions &nbsp; [![](https://img.shields.io/badge/Marketplace%20Actions-qoomon-blue)](https://github.com/marketplace?type=actions&query=qoomon)
 
 - [Temporary Access Tokens](https://github.com/qoomon/actions--access-token)
   - Get rid of PAT tokens, create temporary access token with configurable permissions instead.

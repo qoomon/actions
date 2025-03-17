@@ -1,5 +1,9 @@
 # github-actions &nbsp; [![](https://img.shields.io/badge/Marketplace%20Actions-qoomon-blue)](https://github.com/marketplace?type=actions&query=qoomon)
 
+## Handy Workflows
+- [Auto merge Dependabot Pulle Request](workflows/dependabot-auto-merge.yaml)
+- 
+## Handy Actions
 - [Enchanced Job Context](https://github.com/qoomon/actions--context)
   - Access additional job context informations like current job details (log url, environment, ...) and current deployment details.
     

@@ -1,8 +1,10 @@
 # Source: https://github.com/qoomon/actions/blob/main/workflows/dependabot-auto-merge.yaml
 
-# Setup
-# - Settings > Actions > General > Check "Allow GitHub Actions to create and approve pull requests"
+# Repository Setup
 # - Settings > General > Check "Allow auto-merge Loading"
+#   => https://github.com/OWNER/REPO/settings
+# - Settings > Actions > General > Check "Allow GitHub Actions to create and approve pull requests"
+#   => https://github.com/OWNER/REPO/settings/actions
 
 name: Dependabot auto-merge
 on: pull_request_target

@@ -34,4 +34,12 @@ jobs:
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 body: '@dependabot squash and merge',
-              })
+              });
+        # run: |
+        #   retry=3; delay=10; while ! (
+        #     gh pr merge --auto --squash "$PR_URL"
+        #   ) && ((--retry)); do echo "Retrying ${retry} more time(s) in ${delay} seconds..."; sleep $delay; done
+        # env:
+        #   PR_URL: ${{github.event.pull_request.html_url}}
+        #   GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        #   GH_TOKEN: ${{secrets.DEPENDABOT_TOKEN}}

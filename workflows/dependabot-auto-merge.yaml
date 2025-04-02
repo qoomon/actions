@@ -22,7 +22,9 @@ jobs:
         id: metadata
       
       # possible update-type values :version-update:semver-major, version-update:semver-minor, and version-update:semver-patch
-      - if: steps.metadata.outputs.update-type == 'version-update:semver-minor' || steps.metadata.outputs.update-type == 'version-update:semver-patch'
+      - if: >-
+          steps.metadata.outputs.update-type == 'version-update:semver-minor' || 
+          steps.metadata.outputs.update-type == 'version-update:semver-patch'
         name: Auto-merge changes from Dependabot
         run: |
           retry=3; delay=10; while ! (

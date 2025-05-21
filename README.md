@@ -11,6 +11,9 @@
     
 - [Temporary Access Tokens](https://github.com/qoomon/actions--access-token)
   - Get rid of PAT tokens, create temporary access token with configurable permissions instead.
+ 
+- [Parallel Steps](https://github.com/qoomon/actions--parallel-steps)
+  - Run steps in parallel within one job.
     
 - [Set Env](https://github.com/qoomon/actions--set-env)
   - Set export scoped environment variables based on `vars` and `secrets` context.

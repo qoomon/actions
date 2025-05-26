@@ -6,14 +6,14 @@
 
 
 ## Handy Actions
-- [Enchanced Job Context](https://github.com/qoomon/actions--context)
-  - Access additional job context informations like current job details (log url, environment, ...) and current deployment details.
-    
 - [Temporary Access Tokens](https://github.com/qoomon/actions--access-token)
   - Get rid of PAT tokens, create temporary access token with configurable permissions instead.
  
 - [Parallel Steps](https://github.com/qoomon/actions--parallel-steps)
   - Run steps in parallel within one job.
+
+- [Enchanced Job Context](https://github.com/qoomon/actions--context)
+  - Access additional job context informations like current job details (log url, environment, ...) and current deployment details.
     
 - [Set Env](https://github.com/qoomon/actions--set-env)
   - Set export scoped environment variables based on `vars` and `secrets` context.

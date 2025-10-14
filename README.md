@@ -1,7 +1,7 @@
 # ![github-actions](https://avatars.githubusercontent.com/u/44036562?s=64&v=4) &nbsp; GitHub Actions &nbsp; [![](https://img.shields.io/badge/Marketplace%20Actions-qoomon-blue)](https://github.com/marketplace?type=actions&query=qoomon)
 
 
-## Handy Workflows
+## Workflows
 - [Auto merge Dependabot Pulle Request](workflows/dependabot-auto-merge.yaml)
 
 

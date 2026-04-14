@@ -2,7 +2,7 @@
 
 
 ## Workflows
-- [Auto merge Dependabot Pulle Request](workflows/dependabot-auto-merge.yaml)
+- [Auto merge Dependabot Pull Request](.github/workflows/dependabot-auto-merge.yaml)
 
 
 ## Actions

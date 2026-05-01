@@ -26,7 +26,7 @@
   <a href="https://github.com/qoomon/actions--set-env">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="stats-cards/actions--set-env-dark.svg">
-    <img alt="" src="stats-cards/actions--set-env.svg"></picture></a>d&nbsp;
+    <img alt="" src="stats-cards/actions--set-env.svg"></picture></a> &nbsp;
 
   <a href="https://github.com/qoomon/actions--create-deployment">
   <picture>

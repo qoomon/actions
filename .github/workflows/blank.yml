@@ -22,6 +22,17 @@ jobs:
       - uses: readme-tools/github-readme-stats-action@v1
         with:
           card: pin
+          options: username=qoomon&repo=actions--access-token&description_lines_count=2&${{ env.LIGHT_CARD_THEME }}
+          path: stats-cards/actions--access-token.svg
+      - uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=qoomon&repo=actions--access-token&description_lines_count=2&${{ env.DARK_CARD_THEME }}
+          path: stats-cards/actions--access-token-dark.svg
+
+      - uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
           options: username=qoomon&repo=actions--parallel-steps&description_lines_count=2&${{ env.LIGHT_CARD_THEME }}
           path: stats-cards/actions--parallel-steps.svg
       - uses: readme-tools/github-readme-stats-action@v1

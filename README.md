@@ -16,12 +16,12 @@
   <a href="https://github.com/qoomon/actions--parallel-steps">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="stats-cards/actions--parallel-steps-dark.svg">
-    <img alt="" src="stats-cards/actions--parallel-steps.svg"></picture></a>b&nbsp;
+    <img alt="" src="stats-cards/actions--parallel-steps.svg"></picture></a> &nbsp;
 
   <a href="https://github.com/qoomon/actions--context">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="stats-cards/actions--context-dark.svg">
-    <img alt="" src="stats-cards/repo=actions--context.svg"></picture></a>c&nbsp;
+    <img alt="" src="stats-cards/repo=actions--context.svg"></picture></a> &nbsp;
 
   <a href="https://github.com/qoomon/actions--set-env">
   <picture>

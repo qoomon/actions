@@ -1,0 +1,124 @@
+name: My Stats Cards
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/stats-cards.yml
+  schedule:
+    - cron: '0 0 * * Sun'
+
+jobs:
+  build:
+    env:
+      LIGHT_CARD_THEME: theme=default_repocard
+      DARK_CARD_THEME: title_color=4493f8&icon_color=8d96a0&text_color=8d96a0&bg_color=0c1117&border_color=30363e
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=qoomon&repo=actions--parallel-steps&description_lines_count=2&${{ env.LIGHT_CARD_THEME }}
+          path: stats-cards/actions--parallel-steps.svg
+      - uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=qoomon&repo=actions--parallel-steps&description_lines_count=2&${{ env.DARK_CARD_THEME }}
+          path: stats-cards/actions--parallel-steps-dark.svg
+          
+      - uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=qoomon&repo=actions--context&description_lines_count=2&${{ env.LIGHT_CARD_THEME }}
+          path: stats-cards/actions--context.svg
+      - uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=qoomon&repo=actions--context&description_lines_count=2&${{ env.DARK_CARD_THEME }}
+          path: stats-cards/actions--context-dark.svg
+          
+      - uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=qoomon&repo=actions--set-env&description_lines_count=2&${{ env.LIGHT_CARD_THEME }}
+          path: stats-cards/actions--set-env.svg
+      - uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=qoomon&repo=actions--set-env&description_lines_count=2&${{ env.DARK_CARD_THEME }}
+          path: stats-cards/actions--set-env-dark.svg
+          
+      - uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=qoomon&repo=actions--create-deployment&description_lines_count=2&${{ env.LIGHT_CARD_THEME }}
+          path: stats-cards/actions--create-deployment.svg
+      - uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=qoomon&repo=actions--create-deployment&description_lines_count=2&${{ env.DARK_CARD_THEME }}
+          path: stats-cards/actions--create-deployment-dark.svg
+          
+      - uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=qoomon&repo=actions--event-inputs&description_lines_count=2&${{ env.LIGHT_CARD_THEME }}
+          path: stats-cards/actions--event-inputs.svg
+      - uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=qoomon&repo=actions--event-inputs&description_lines_count=2&${{ env.DARK_CARD_THEME }}
+          path: stats-cards/actions--event-inputs-dark.svg
+          
+      - uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=qoomon&repo=actions--setup-git&description_lines_count=2&${{ env.LIGHT_CARD_THEME }}
+          path: stats-cards/actions--setup-git.svg
+      - uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=qoomon&repo=actions--setup-git&description_lines_count=2&${{ env.DARK_CARD_THEME }}
+          path: stats-cards/actions--setup-git-dark.svg
+          
+      - uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=qoomon&repo=actions--oidc-debug&description_lines_count=2&${{ env.LIGHT_CARD_THEME }}
+          path: stats-cards/actions--oidc-debug.svg
+      - uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=qoomon&repo=actions--oidc-debug&description_lines_count=2&${{ env.DARK_CARD_THEME }}
+          path: stats-cards/actions--oidc-debug-dark.svg
+          
+      - uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=qoomon&repo=actions--create-commit&description_lines_count=2&${{ env.LIGHT_CARD_THEME }}
+          path: stats-cards/actions--create-commit.svg
+      - uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=qoomon&repo=actions--create-commit&description_lines_count=2&${{ env.DARK_CARD_THEME }}
+          path: stats-cards/actions--create-commit-dark.svg
+          
+      - uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=qoomon&repo=actions--create-tag&description_lines_count=2&${{ env.LIGHT_CARD_THEME }}
+          path: stats-cards/actions--create-tag.svg
+      - uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=qoomon&repo=actions--create-tag&description_lines_count=2&${{ env.DARK_CARD_THEME }}
+          path: stats-cards/actions--create-tag-dark.svg
+          
+      - uses: qoomon/actions--setup-git@v1
+      - name: Commit cards
+        run: |
+          git add stats-cards/*.svg
+          git commit -m "Update README cards" || exit 0
+          git push

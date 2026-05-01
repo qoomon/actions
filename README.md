@@ -11,7 +11,7 @@
   <a href="https://github.com/qoomon/actions--access-token">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="stats-cards/actions--access-token-dark.svg">
-    <img alt="" src="stats-cards/actions--access-token.svg"></picture></a>
+    <img alt="" src="stats-cards/actions--access-token.svg"></picture></a> &nbsp;
 
   <a href="https://github.com/qoomon/actions--parallel-steps">
   <picture>

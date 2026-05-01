@@ -11,22 +11,22 @@
   <a href="https://github.com/qoomon/actions--access-token">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="stats-cards/actions--access-token-dark.svg">
-    <img alt="" src="stats-cards/actions--access-token.svg"></picture></a> &nbsp;
+    <img alt="" src="stats-cards/actions--access-token.svg"></picture></a>
 
   <a href="https://github.com/qoomon/actions--parallel-steps">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="stats-cards/actions--parallel-steps-dark.svg">
-    <img alt="" src="stats-cards/actions--parallel-steps.svg"></picture></a> &nbsp;
+    <img alt="" src="stats-cards/actions--parallel-steps.svg"></picture></a>b&nbsp;
 
   <a href="https://github.com/qoomon/actions--context">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="stats-cards/actions--context-dark.svg">
-    <img alt="" src="stats-cards/repo=actions--context.svg"></picture></a> &nbsp;
+    <img alt="" src="stats-cards/repo=actions--context.svg"></picture></a>c&nbsp;
 
   <a href="https://github.com/qoomon/actions--set-env">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="stats-cards/actions--set-env-dark.svg">
-    <img alt="" src="stats-cards/actions--set-env.svg"></picture></a> &nbsp;
+    <img alt="" src="stats-cards/actions--set-env.svg"></picture></a>d&nbsp;
 
   <a href="https://github.com/qoomon/actions--create-deployment">
   <picture>

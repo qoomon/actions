@@ -21,11 +21,25 @@
             .header { font-size: 15.5px; }
           }
           
-    .description { font: 400 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: #434d58 }
+    .description {
+      font: 400 13px 'Segoe UI', Ubuntu, Sans-Serif;fill: #434d58;
+      
+    }
     .gray { font: 400 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #434d58 }
-    .icon { fill: #586069 }
     .badge { font: 600 11px 'Segoe UI', Ubuntu, Sans-Serif; }
     .badge rect { opacity: 0.2 }
+
+    .stat { font: 400 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #434d58 }
+    .stagger {
+      opacity: 0;
+      animation: fadeInAnimation 0.3s ease-in-out forwards;
+    }
+    .not_bold { font-weight: 400 }
+    .bold { font-weight: 700 }
+    .icon {
+      fill: #586069;
+      display: block;
+    }
   
 
           
@@ -99,8 +113,8 @@
           
     
 
-    <text class="description" x="25" y="-5">
-      <tspan dy="1.2em" x="25">Create deployments ia GitHub API.  Deployments get</tspan><tspan dy="1.2em" x="25">automatically closed based on job status.</tspan>
+    <text class="description" x="25" y="-5"> 
+      <tspan dy="1.2em" x="25">Create deployments ia GitHub API. Deployments get</tspan><tspan dy="1.2em" x="25">automatically closed based on job status.</tspan>
     </text>
 
     <g transform="translate(30, 65)">
@@ -109,7 +123,7 @@
       <circle data-testid="lang-color" cx="0" cy="-5" r="6" fill="#3178c6" />
       <text data-testid="lang-name" class="gray" x="15">TypeScript</text>
     </g>
-    </g><g transform="translate(82.24375, 0)"><g transform="translate(0, 0)">
+    </g><g transform="translate(80.53999967575072, 0)"><g transform="translate(0, 0)">
       <svg
         class="icon"
         y="-12"
@@ -122,6 +136,11 @@
       </svg>
     </g><g transform="translate(20, 0)"><text data-testid="stargazers" class="gray">1</text></g></g>
     </g>
+    
+  <svg x="0" y="0"><g transform="translate(-3, 88)">
+      
+    </g></svg>
+    
   
         </g>
       </svg>

@@ -21,11 +21,25 @@
             .header { font-size: 15.5px; }
           }
           
-    .description { font: 400 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: #434d58 }
+    .description {
+      font: 400 13px 'Segoe UI', Ubuntu, Sans-Serif;fill: #434d58;
+      
+    }
     .gray { font: 400 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #434d58 }
-    .icon { fill: #586069 }
     .badge { font: 600 11px 'Segoe UI', Ubuntu, Sans-Serif; }
     .badge rect { opacity: 0.2 }
+
+    .stat { font: 400 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #434d58 }
+    .stagger {
+      opacity: 0;
+      animation: fadeInAnimation 0.3s ease-in-out forwards;
+    }
+    .not_bold { font-weight: 400 }
+    .bold { font-weight: 700 }
+    .icon {
+      fill: #586069;
+      display: block;
+    }
   
 
           
@@ -99,7 +113,7 @@
           
     
 
-    <text class="description" x="25" y="-5">
+    <text class="description" x="25" y="-5"> 
       <tspan dy="1.2em" x="25">Create tags via GitHub api.</tspan>
     </text>
 
@@ -111,6 +125,11 @@
     </g>
     </g>
     </g>
+    
+  <svg x="0" y="0"><g transform="translate(-3, 88)">
+      
+    </g></svg>
+    
   
         </g>
       </svg>

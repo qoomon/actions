@@ -17,7 +17,7 @@ jobs:
       LIGHT_CARD_THEME: theme=default_repocard
       DARK_CARD_THEME: title_color=4493f8&icon_color=8d96a0&text_color=8d96a0&bg_color=0c1117&border_color=30363e
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - uses: readme-tools/github-readme-stats-action@v2
         with:

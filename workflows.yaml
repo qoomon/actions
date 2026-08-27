@@ -7,7 +7,7 @@
 # - Settings > Actions > General > Check "Allow GitHub Actions to create and approve pull requests"
 #   => https://github.com/OWNER/REPO/settings/actions
 
-name: Dependabot auto-merge
+name: Dependabot Auto-Merge
 on: pull_request_target
 
 permissions:

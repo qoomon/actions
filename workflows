@@ -1,0 +1,48 @@
+name: Dependabot Auto-Merge
+
+on:
+  workflow_call:
+    inputs:
+      target:
+        description: 'Highest allowed SemVer level to auto-merge: patch, minor, or major'
+        required: false
+        type: string
+        default: 'patch'
+    secrets:
+      token:
+        required: false
+        description: 'Optional personal access token or app token for auto-merge permissions'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    if: ${{ github.actor == 'dependabot[bot]' }}
+    steps:
+      - uses: dependabot/fetch-metadata@v3
+        id: metadata
+
+      - name: Auto-merge changes from Dependabot
+        if: >-
+          ( steps.metadata.outputs.update-type == 'version-update:semver-major' && (
+              inputs.target == 'major'
+          )) ||
+          ( steps.metadata.outputs.update-type == 'version-update:semver-minor' && (
+              inputs.target == 'major' ||
+              inputs.target == 'minor'
+          )) || 
+          ( steps.metadata.outputs.update-type == 'version-update:semver-patch' && (
+            inputs.target == 'major' ||
+            inputs.target == 'minor' ||
+            inputs.target == 'patch'
+          ))
+        run: |
+          retry=3; delay=10; while ((retry--)) && ! (
+            gh pr merge --auto --squash "$PR_URL"
+          ); do echo "Retrying ${retry} more time(s) in ${delay} seconds..."; sleep $delay; done
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ secrets.token || secrets.GITHUB_TOKEN }}

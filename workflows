@@ -1,17 +1,14 @@
-name: Dependabot Auto-Merge
+# Source: https://github.com/qoomon/actions/blob/main/workflows/dependabot-auto-merge.yaml
+# Version: 1.0.2
 
-on:
-  workflow_call:
-    inputs:
-      target:
-        description: 'Highest allowed SemVer level to auto-merge: patch, minor, or major'
-        required: false
-        type: string
-        default: 'patch'
-    secrets:
-      token:
-        required: false
-        description: 'Optional personal access token or app token for auto-merge permissions'
+# Repository Setup
+# - Settings > General > Check "Allow auto-merge Loading"
+#   => https://github.com/OWNER/REPO/settings
+# - Settings > Actions > General > Check "Allow GitHub Actions to create and approve pull requests"
+#   => https://github.com/OWNER/REPO/settings/actions
+
+name: Dependabot auto-merge
+on: pull_request_target
 
 permissions:
   contents: write
@@ -24,25 +21,14 @@ jobs:
     steps:
       - uses: dependabot/fetch-metadata@v3
         id: metadata
-
-      - name: Auto-merge changes from Dependabot
+      - name: Auto-merge Dependabot Pull-Request
         if: >-
-          ( steps.metadata.outputs.update-type == 'version-update:semver-major' && (
-              inputs.target == 'major'
-          )) ||
-          ( steps.metadata.outputs.update-type == 'version-update:semver-minor' && (
-              inputs.target == 'major' ||
-              inputs.target == 'minor'
-          )) || 
-          ( steps.metadata.outputs.update-type == 'version-update:semver-patch' && (
-            inputs.target == 'major' ||
-            inputs.target == 'minor' ||
-            inputs.target == 'patch'
-          ))
+          steps.metadata.outputs.update-type == 'version-update:semver-patch' || 
+          steps.metadata.outputs.update-type == 'version-update:semver-minor'
         run: |
           retry=3; delay=10; while ((retry--)) && ! (
             gh pr merge --auto --squash "$PR_URL"
           ); do echo "Retrying ${retry} more time(s) in ${delay} seconds..."; sleep $delay; done
         env:
-          PR_URL: ${{ github.event.pull_request.html_url }}
-          GH_TOKEN: ${{ secrets.token || secrets.GITHUB_TOKEN }}
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GH_TOKEN: ${{secrets.DEPENDABOT_TOKEN || secrets.GITHUB_TOKEN}}

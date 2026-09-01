@@ -64,6 +64,8 @@
 
 - [GitHub TypeScript Action Template](https://github.com/qoomon/actions--template)
 
+## Handy 3rd Party Actions
+- [paths-filter](https://github.com/dorny/paths-filter) Enables conditional executions based on git changes.
 
 
 

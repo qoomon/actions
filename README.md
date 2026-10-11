@@ -13,11 +13,6 @@
     <source media="(prefers-color-scheme: dark)" srcset="stats-cards/actions--access-token-dark.svg">
     <img alt="" src="stats-cards/actions--access-token.svg"></picture></a> &nbsp;
 
-  <a href="https://github.com/qoomon/actions--parallel-steps">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="stats-cards/actions--parallel-steps-dark.svg">
-    <img alt="" src="stats-cards/actions--parallel-steps.svg"></picture></a> &nbsp;
-
   <a href="https://github.com/qoomon/actions--context">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="stats-cards/actions--context-dark.svg">
